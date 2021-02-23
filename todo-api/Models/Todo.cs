@@ -11,7 +11,7 @@ namespace todo_api.Models
     {
         [Key]
         public int Id { get; set; }
-        [Column(TypeName = "nvarchar(100"), Required]
+        [Required]
         public string Title { get; set; }
         [Required]
         public bool Completed { get; set; }

@@ -11,12 +11,7 @@ namespace todo_api.Models
         public TodoDBContext() {}
         public TodoDBContext(DbContextOptions<TodoDBContext> options) : base(options) {}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Todo>()
-                .Property(p => p.Completed)
-                .HasDefaultValue(false);
-        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder) { }
 
         public DbSet<Todo> Todos { get; set; }
     }
